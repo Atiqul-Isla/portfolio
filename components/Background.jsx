@@ -1,7 +1,7 @@
 import React from 'react'
 import { Scroll } from '@react-three/drei'
 import {OrbitControls, Stars, Sky, ScrollControls, Sparkles, Cloud} from '@react-three/drei'
-
+import { motion } from 'framer-motion-3d'
 export function Background(props) {
   return <>
       <ambientLight intensity={5}/>

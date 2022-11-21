@@ -17,6 +17,7 @@ const About = () => {
   return (
     <motion.div  id='about' className='h-[100%] flex items-center  text-center relative' initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.75, ease: "easeOut"}} exit={{opacity:1}}>
         <div className='container mx-auto rounded-2xl pb-32 my-0'>
+        
             <h1 className='py-4 mt-20'>About;</h1>
             <div className='flex flex-wrap md:justify-center overflow-hidden'>
                 <div className='p-4 sm:w-1/2 lg:w-1/3'>

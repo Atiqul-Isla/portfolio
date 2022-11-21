@@ -29,23 +29,27 @@ const Navbar = () => {
   
 
   return (
-    <motion.div className='fixed w-full h-20 shadow-md z-[100]' id={color ? 'black-bg' : 't-bg'} initial="hidden" animate="visible" variants={{
-        hidden: {
-          y: '-150%',
-          scale:.8,
-          opacity: 0
-        },
-        visible: {
-          y: '0%',
-          scale: 1,
-          opacity: 1,
-          transition: {
-            type: 'spring',
-            delay: .75
-          }
-        }
-      }}>
-            <div className='flex lg:justify-between items-center container mx-auto h-full px-2 2xl:px-16'>
+    <div className='fixed w-full h-20 shadow-md z-[100]' id={color ? 'black-bg' : 't-bg'}>
+            <motion.div className='flex lg:justify-between items-center container mx-auto h-full px-2 2xl:px-16'
+            initial="hidden" 
+            animate="visible" 
+            variants={{
+                hidden: {
+                  y: '-150%',
+                  scale:.8,
+                  opacity: 0
+                },
+                visible: {
+                  y: '0%',
+                  scale: 1,
+                  opacity: 1,
+                  transition: {
+                    type: 'spring',
+                    delay: .75
+                  }
+                }
+              }}
+            >
                 <div className='lg:hidden hover:scale-105 cursor-pointer ml-5' onClick={handleNav}>
                     <AiOutlineMenu size={35} />
                 </div>
@@ -61,7 +65,7 @@ const Navbar = () => {
                         <Link href='#skills'>
                             <li className='mr-10 text-sm uppercase hover:text-[#9d4edd] ease-in duration-200'>\\ Skills</li>
                         </Link>
-                        <Link href='/projects'>
+                        <Link href='#projects'>
                             <li className='mr-10 text-sm uppercase hover:text-[#9d4edd] ease-in duration-200'>\\ Projects</li>
                         </Link>
                         <Link href='/work'>
@@ -72,7 +76,7 @@ const Navbar = () => {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         <div className={nav ? 'lg:hidden fixed left-0 top-0 w-full h-screen bg-white/20' : ''}>
             <div className={nav ? 'fixed left-[0] top-0 w-[75%] sm:w-[65%] md:[45%] h-screen bg-[white] p-10 ease-in duration-500': 'fixed left-[-150%] top-0 w-[75%] sm:w-[65%] md:[45%] h-screen bg-[white] p-10 ease-in duration-500'}>
                 <div>
@@ -90,6 +94,9 @@ const Navbar = () => {
                             </Link>
                             <Link href='#about'>
                                 <li className='py-4 text-sm px-2 hover:bg-[#e0aaff] rounded-md pr-2 hover:text-white duration-200'>About</li>
+                            </Link>
+                            <Link href='#skills'>
+                                <li className='py-4 text-sm px-2 hover:bg-[#e0aaff] rounded-md pr-2 hover:text-white duration-200'>Skills</li>
                             </Link>
                             <Link href='/'>
                                 <li className='py-4 text-sm px-2 hover:bg-[#e0aaff] rounded-md pr-2 hover:text-white duration-200'>Projects</li>
@@ -123,7 +130,7 @@ const Navbar = () => {
             </div>
 
         </div>
-    </motion.div>
+    </div>
   )
 }
 

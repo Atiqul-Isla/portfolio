@@ -4,11 +4,14 @@ import About from '../components/About'
 import Landing from '../components/Landing'
 import Navbar from '../components/Navbar'
 import {Background} from '../components/Background'
-import React, {useState, Suspense} from 'react'
+import React, {useState, Suspense, useEffect} from 'react'
 import styled from 'styled-components'
 import {Canvas} from '@react-three/fiber'
 import * as THREE from 'three'
 import Skills from '../components/Skills'
+import Examples from '../components/Examples'
+import { motion } from 'framer-motion'
+
 
 // const CanvasContainer = styled.div`
 // // width:100%
@@ -16,6 +19,8 @@ import Skills from '../components/Skills'
 // // `
 export default function Home() {
   const [color, setColor] = useState(false)
+  
+
   const handleColor = () => {
     if (window.scrollY >= 5){
         setColor(true)
@@ -25,9 +30,7 @@ export default function Home() {
     }
   }
   
-  if (typeof window !== "undefined") {
-    window.addEventListener('scroll', handleColor)
-  }
+  
   return (
     <div>
       <Head>
@@ -46,6 +49,7 @@ export default function Home() {
       </div>
       <About/>
       <Skills/>
+      <Examples/>
     
     </div>
   )
