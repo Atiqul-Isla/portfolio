@@ -11,6 +11,7 @@ import * as THREE from 'three'
 import Skills from '../components/Skills'
 import Examples from '../components/Examples'
 import { motion } from 'framer-motion'
+import Work from '../components/Work'
 
 
 // const CanvasContainer = styled.div`
@@ -39,7 +40,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar/>
-      <div className='h-[110vh] relative'>
+      <div className='h-[100vh] relative'>
         <Landing/>
         <Canvas>
           <Suspense fallback={null}>
@@ -50,6 +51,7 @@ export default function Home() {
       <About/>
       <Skills/>
       <Examples/>
+      <Work/> 
     
     </div>
   )

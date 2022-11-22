@@ -1,5 +1,5 @@
 import React from 'react'
-import Images from './Images'
+import Images from '../data/Images'
 import Image from 'next/image'
 import {useState } from "react"
 import Filter from './Filter'
@@ -21,9 +21,9 @@ const Skills = () => {
 
   return (
     <div>
-        <div id='skills' className='h-full  bottom-[10vh] items-center  text-center relative min-h-[70vh]'>
+        <div id='skills' className='items-center text-center relative'>
             <div className='container mx-auto rounded-2xl pb-6 my-0'>
-                <h1 className='mt-60'>Skills;</h1>
+                <h1 className='mt-60 uppercase'>Skills;</h1>
             </div>
             <div className='container mx-auto flex flex-wrap pb-6 pt-12'>
                 <Filter filter={filter} />

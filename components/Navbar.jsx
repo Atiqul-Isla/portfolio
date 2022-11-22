@@ -68,7 +68,7 @@ const Navbar = () => {
                         <Link href='#projects'>
                             <li className='mr-10 text-sm uppercase hover:text-[#9d4edd] ease-in duration-200'>\\ Projects</li>
                         </Link>
-                        <Link href='/work'>
+                        <Link href='#work'>
                             <li className='mr-10 text-sm uppercase hover:text-[#9d4edd] ease-in duration-200'>\\ Work</li>
                         </Link>
                         <Link href='/contact'>
@@ -98,10 +98,10 @@ const Navbar = () => {
                             <Link href='#skills'>
                                 <li className='py-4 text-sm px-2 hover:bg-[#e0aaff] rounded-md pr-2 hover:text-white duration-200'>Skills</li>
                             </Link>
-                            <Link href='/'>
+                            <Link href='#projects'>
                                 <li className='py-4 text-sm px-2 hover:bg-[#e0aaff] rounded-md pr-2 hover:text-white duration-200'>Projects</li>
                             </Link>
-                            <Link href='/'>
+                            <Link href='#work'>
                                 <li className='py-4 text-sm px-2 hover:bg-[#e0aaff] rounded-md pr-2 hover:text-white duration-200'>Work</li>
                             </Link>
                             <Link href='/'>
