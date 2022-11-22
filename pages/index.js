@@ -12,6 +12,7 @@ import Skills from '../components/Skills'
 import Examples from '../components/Examples'
 import { motion } from 'framer-motion'
 import Work from '../components/Work'
+import Contact from '../components/Contact'
 
 
 // const CanvasContainer = styled.div`
@@ -51,7 +52,8 @@ export default function Home() {
       <About/>
       <Skills/>
       <Examples/>
-      <Work/> 
+      <Work/>
+      <Contact/> 
     
     </div>
   )
