@@ -5,6 +5,7 @@ const workData = [
         jobName: 'Software Delivery Engineer',
         type: 'intern',
         skills: ['Python', 'bash', 'Jenkins', 'Bitbucket'],
+        date: '2022'
 
     },
     {
@@ -13,8 +14,10 @@ const workData = [
         jobName: 'IT Infrastructure',
         type: 'intern',
         skills: ['Python'],
+        date: '2021'
 
     },  
+    
 
 ]
 
