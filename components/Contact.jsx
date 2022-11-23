@@ -1,6 +1,10 @@
 import React from 'react'
-import { AiFillPhone, AiOutlineMail } from 'react-icons/ai'
+import { AiFillPhone, AiOutlineMail,AiOutlineDown } from 'react-icons/ai'
+import { BsPersonLinesFill } from 'react-icons/bs'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import {RiMailFill} from 'react-icons/ri'
 import emailjs from '@emailjs/browser'
+import { motion } from 'framer-motion'
 
 const Contact = () => {
 
@@ -40,12 +44,12 @@ const Contact = () => {
       }; 
       
   return (
-    <div id='contact' className='h-[100%] flex relative mt-12'>
-        <div className='container mx-auto rounded-2xl pb-32 my-0 flex flex-col md:flex-row md:space-x-12 md:space-y-0 space-y-6 overflow-hidden'>
-        <div className=''>
+    <div id='contact' className='flex relative mt-12 o'>
+        <div className='container mx-auto rounded-2xl pb-32 my-0 flex flex-col md:flex-row md:space-x-12 md:space-y-0 space-y-6 overflow-hidden mt-24'>
+        <div className='ml-4'>
                 <div>
-                    <h1 className='font-bold lg:text-4xl md:text-3xl sm:txt-2xl text-xl tracking- text-indigo-600'>Get in Touch!</h1>
-                    <p className='pt-2 lg:text-3xl md:text-2xl sm:txt-xl text-xl tracking-wide text-indigo-400'>Whether you are curious about my work, want to schedule a meeting, or want a problem you need help with, do not hesitate to contact me!</p>
+                    <h1 className='font-bold  tracking- text-indigo-600'>Get in Touch!</h1>
+                    <p className='pt-2 lg:text-3xl md:text-xl sm:txt-lg text-lg tracking-wide text-indigo-400 hidden xl:block'>Whether you are curious about my work, want to schedule a meeting, or want a problem you need help with, do not hesitate to contact me!</p>
                     <span className='mt-4 text-lg text-indigo-200'>I am open to Full-time, Part-time, Contract and Freelance oppurtunities!</span>
                 </div>
                 <div className='py-8 text-white'>
@@ -53,15 +57,34 @@ const Contact = () => {
                         <AiFillPhone size={30}/>
                         <span className='font-bold pl-2'>+1(647) 787 1532</span>
                     </div>
-                    <div className='flex flex-row py-2'>
-                        <AiOutlineMail size={30}/>
-                        <span className='font-bold pl-2'>agency@nivaly.ca</span>
-                    </div>
                 </div>
+                <div className=''>
+                        <motion.div className='flex flex-row py-2' initial="hidden" animate="visible" variants={{
+                        hidden: {
+                            y: '20%',
+                            scale:.8,
+                            opacity: 0
+                        },
+                        visible: {
+                            y: '0%',
+                            scale: 1,
+                            opacity: 1,
+                            transition: {
+                            type: 'spring',
+                            delay: 1
+                            }
+                        }
+                        }}>
+                            <motion.div className='rounded-full shadow-md p-3 cursor-pointer hover:scale-105 bg-[white] text-black'><FaLinkedin size={40} className=" rounded-md"></FaLinkedin></motion.div>
+                            <motion.div className='rounded-full shadow-md  ml-4  p-3 cursor-pointer hover:scale-105 bg-[white] text-black'><FaGithub size={40} className="rounded-2xl" /></motion.div>
+                            <motion.div className='rounded-full shadow-md  ml-4  p-3 cursor-pointer hover:scale-105 bg-[white] text-black'><RiMailFill size={40} className=" rounded-md"/></motion.div>
+                            <motion.div className='rounded-full shadow-md ml-4 p-3 cursor-pointer hover:scale-105 bg-[white] text-black'><BsPersonLinesFill size={40} className=" rounded-md"/></motion.div>
+                        </motion.div>
+                    </div>
             </div>
             <div className='relative'>
                 
-                <div className='bg-gray-800 shadow-black text-white rounded-xl shadow-lg p-8 md:w-[600px]'>
+                <div className='bg-gray-800 shadow-black text-white rounded-xl shadow-lg p-8 md:w-[50vh] lg:w-[90vh] mr-2'>
                     <form action="" className='flex flex-col space-y-4' onSubmit={sendEmail}>
                         <div>
                             <label className='pb-2'>Name<strong className='text-purple-600'>*</strong></label>
@@ -80,8 +103,8 @@ const Contact = () => {
                             <input type='submit' value='Send Message' style={{cursor: 'pointer'}}></input>
                         </button>
                         <div className='message'>
-                            <div className='text-[#00df9a] text-center hidden' id='success'>Your message has been sent succesfully!</div>
-                            <div className='text-[#FFa065] text-center hidden' id='danger'>Fields are empty!</div>
+                            <div className='text-indigo-400 text-center hidden' id='success'>Your message has been sent succesfully!</div>
+                            <div className='text-red-400 text-center hidden' id='danger'>*  Fields are empty!</div>
                         </div>
                     </form>
 
