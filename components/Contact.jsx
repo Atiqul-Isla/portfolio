@@ -88,11 +88,11 @@ const Contact = () => {
                     <form action="" className='flex flex-col space-y-4' onSubmit={sendEmail}>
                         <div>
                             <label className='pb-2'>Name<strong className='text-purple-600'>*</strong></label>
-                            <input for="" className="text-black ring-1 ring-gray-300 w-full rounded-md px-4 outline-none focus:ring-2 focus:ring-indigo-600 mt-2 py-1" placeholder='Enter your name...' name='from_name' id='name'/>
+                            <input htmlFor="" className="text-black ring-1 ring-gray-300 w-full rounded-md px-4 outline-none focus:ring-2 focus:ring-indigo-600 mt-2 py-1" placeholder='Enter your name...' name='from_name' id='name'/>
                         </div>
                         <div>
                             <label className='pb-2'>Email<strong className='text-purple-600'>*</strong></label>
-                            <input for="" className="text-black ring-1 ring-gray-300 w-full rounded-md px-4 outline-none focus:ring-2 focus:ring-indigo-600 mt-2 py-1" placeholder='Enter your email...' name='email' id='email'/>
+                            <input htmlFor="" className="text-black ring-1 ring-gray-300 w-full rounded-md px-4 outline-none focus:ring-2 focus:ring-indigo-600 mt-2 py-1" placeholder='Enter your email...' name='email' id='email'/>
                         </div>
                         
                         <div>

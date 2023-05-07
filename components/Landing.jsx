@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 const Landing = () => {
   return (
-    <div className='absolute w-full h-screen text-center z-[95]'>
+    <div className='absolute w-full h-screen text-center z-[80]'>
         <div className='container mx-auto h-full w-full p-2 flex justify-center items-center'>
             <div>
                 <h1 className='uppercase tracking-widest sm:7xl md:text-8xl'>Atiqul Islam</h1>

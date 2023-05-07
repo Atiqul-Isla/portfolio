@@ -63,7 +63,7 @@ const Navbar = () => {
                             <li className='mr-10 text-sm uppercase hover:text-[#9d4edd] ease-in duration-200'>\\ About</li>
                         </Link>
                         <Link href='#skills'>
-                            <li className='mr-10 text-sm uppercase hover:text-[#9d4edd] ease-in duration-200'>\\ Skills</li>
+                            <li className='mr-10 text-sm uppercase hover:text-[#9d4edd] ease-in duration-200 hidden md:block'>\\ Skills</li>
                         </Link>
                         <Link href='#projects'>
                             <li className='mr-10 text-sm uppercase hover:text-[#9d4edd] ease-in duration-200'>\\ Projects</li>
@@ -96,7 +96,7 @@ const Navbar = () => {
                                 <li className='py-4 text-sm px-2 hover:bg-[#e0aaff] rounded-md pr-2 hover:text-white duration-200'>About</li>
                             </Link>
                             <Link href='#skills'>
-                                <li className='py-4 text-sm px-2 hover:bg-[#e0aaff] rounded-md pr-2 hover:text-white duration-200'>Skills</li>
+                                <li className='hidden md:block py-4 text-sm px-2 hover:bg-[#e0aaff] rounded-md pr-2 hover:text-white duration-200'>Skills</li>
                             </Link>
                             <Link href='#projects'>
                                 <li className='py-4 text-sm px-2 hover:bg-[#e0aaff] rounded-md pr-2 hover:text-white duration-200'>Projects</li>

@@ -10,6 +10,19 @@ html {
   scroll-behavior: smooth!important;
 }
 
+::-webkit-scrollbar{
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(27,29,32,1) 100%);
+  opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:#9333ea;
+  border-radius: 0.1em;
+}
 
 @layer base {
 
@@ -75,3 +88,23 @@ html {
     height: 63px;
   }
 }
+
+/* Style the scrollbar */
+/* .bg-white::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 4px;
+}
+
+.bg-white::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.bg-white::-webkit-scrollbar-thumb {
+  background: #9d4edd;
+  border-radius: 4px;
+}
+
+.bg-white::-webkit-scrollbar-thumb:hover {
+  background: #a65ce2;
+} */

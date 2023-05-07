@@ -23,92 +23,110 @@ const Images = [
     {
         id: 1,
         image: image1,
-        type: 'Frontend'
+        type: 'Frontend',
+        name: 'JavaScript'
     }, 
     {
         id: 2,
         image: image2,
-        type: 'Data Analysis' 
+        type: 'Data Analysis',
+        name: 'TensorFLow' 
     },
     {
         id: 3,
         image: image3,
-        type: 'Frontend' 
+        type: 'Frontend',
+        name: 'React'  
     },
     {
         id: 4,
         image: image4,
-        type: 'Database' 
+        type: 'Database',
+        name: 'Firebase' 
     },
     {
         id: 5,
         image: image5,
-        type: 'Frontend' 
+        type: 'Frontend',
+        name: 'tailwind'
     },
     {
         id: 6,
         image: image6,
-        type: 'Languages' 
+        type: 'Languages',
+        name: 'Python' 
     },
     {
         id: 7,
         image: image7,
-        type: 'Backend' 
+        type: 'Backend',
+        name: 'Django' 
     },
     {
         id: 8,
         image: image8,
-        type: 'Frontend' 
+        type: 'Frontend',
+        name: 'HTML' 
     },
     {
         id: 9,
         image: image9,
-        type: 'Frontend' 
+        type: 'Frontend',
+        name: 'CSS' 
     },
     {
         id: 10,
         image: image10,
-        type: 'Tools' 
+        type: 'Tools',
+        name: 'Jupyter' 
     },
     {
         id: 11,
         image: image11,
-        type: 'Data Analysis' 
+        type: 'Data Analysis', 
+        name: 'openCV'
     },
     {
         id: 12,
         image: image12,
-        type: 'Tools' 
+        type: 'Tools',
+        name: 'AWS' 
     },
     {
         id: 13,
         image: image13,
-        type: 'Database' 
+        type: 'Database',
+        name: 'MongoDB' 
     },
     {
         id: 14,
         image: image14,
-        type: 'Tools' 
+        type: 'Tools',
+        name: 'GitHub' 
     },
     {
         id: 15,
         image: image15,
-        type: 'Frontend' 
+        type: 'Frontend',
+        name: 'Bootstrap',
     },
     {
         id: 16,
         image: image16,
-        type: 'Languages' 
+        type: 'Languages',
+        name: 'C++' 
     },
     {
         id: 17,
         image: image17,
-        type: 'Languages' 
+        type: 'Languages',
+        name: 'Java' 
     },
     {
         id: 18,
         image: image18,
-        type: 'Data Analysis' 
+        type: 'Data Analysis',
+        name: 'Numpy'
     },
     
    ];
