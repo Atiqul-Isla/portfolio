@@ -145,7 +145,7 @@ const Examples = () => {
                                 transition={{ duration: 0.2 }}
                               >
                                 <motion.div
-                                  className="bg-[#1b1d20] rounded-lg w-[50vw] h-[70vh] l "
+                                  className="bg-[#1b1d20] rounded-lg w-[60vw] h-[70vh] l "
                                   style={{overflowY: "scroll" }}
                                   initial="hidden" 
                                   animate="visible" 
@@ -180,19 +180,29 @@ const Examples = () => {
                                   <div className="p-6">
                                   <h2 className="font-bold mt-6 text-center text-2xl uppercase">{selectedProject.name}</h2>
                                   <p className="text-gray-500 text-sm text-center">{selectedProject.teamMembers} Team Members | Personal Role: {selectedProject.personalRole} | XXX {selectedProject.date}</p>
-                                  <div className="flex justify-center mt-4 mb-8">
-                                    {selectedProject.tags.map(tag => (
-                                      <span className="text-indigo-500 bg-gray-800 px-2 py-1 rounded-full text-sm mr-2" key={tag}>
-                                        {tag}
-                                      </span>
-                                    ))}
-                                  </div>
+                                  {/* <div className="flex mt-4 mb-8 justify-center items-start">
+                                    <div className='flex-1'>
+                                      {selectedProject.tags.map(tag => (
+                                        <span className="text-indigo-500 bg-gray-800 px-2 py-1 rounded-full text-sm mr-2 mt-4" key={tag}>
+                                          {tag}
+                                        </span>
+                                      ))}
+                                    </div>
+                                  </div> */}
                                   <div className="flex justify-between items-start">
                                     <div className="flex-1 mr-6">
-                                      <h3 className="text-lg font-bold mb-2">Skills:</h3>
+                                      <h3 className="text-lg font-bold mb-2">Tags:</h3>
+                                      <div className="flex flex-wrap">
+                                        {selectedProject.tags.map(tag => (
+                                          <span className="text-indigo-500 bg-gray-800 px-2 py-1 rounded-full text-sm mr-2 mt-4" key={tag}>
+                                            {tag}
+                                          </span>
+                                        ))}
+                                      </div>
+                                      <h3 className="text-lg font-bold mb-2 mt-4">Skills:</h3>
                                       <div className="flex flex-wrap">
                                         {selectedProject.skills.map(skill => (
-                                          <span className="text-indigo-500 bg-gray-800 px-2 py-1 rounded-full text-sm mr-2" key={skill}>
+                                          <span className="text-indigo-500 bg-gray-800 px-2 py-1 rounded-full text-sm mr-2 mt-4" key={skill}>
                                             {skill}
                                           </span>
                                         ))}
@@ -202,27 +212,16 @@ const Examples = () => {
                                       <div className="rounded-lg shadow-lg overflow-hidden mb-8 mt-8">
                                         <Image src={selectedProject.detailedImage} alt="Project detail" className="w-full hover:scale-110 transition duration-300"/>
                                       </div>
-                                      <div className="flex mt-8">
-                                        <div className="w-1/2 mr-8 overflow-hidden rounded-lg">
-                                          <Image src={selectedProject.moreImage} alt="Project Feature" className="rounded-lg shadow hover:scale-110 transition duration-300" />
-                                        </div>
-                                        <div className="w-1/2 overflow-hidden rounded-lg">
-                                          <Image src={selectedProject.moreImage} alt="Project Feature" className="rounded-lg shadow hover:scale-110 transition duration-300" />
-                                        </div>
-                                      </div>
-                                      <div className="flex mt-8">
-                                        <div className="w-1/2 pr-4">
-                                          <h3 className="font-bold mb-2 text-center">Features</h3>
-                                          <ul className="list-none ml-6 mt-6">
-                                            <li className="text-white text-lg mb-4">\\ Feature 1</li>
-                                            <li className="text-white text-lg mb-4">\\ Feature 2</li>
-                                            <li className="text-white text-lg mb-4">\\ Feature 3</li>
-                                            <li className="text-white text-lg mb-4">\\ Feature 4</li>
-                                          </ul>
-                                        </div>
-                                        <div className="w-1/2 overflow-hidden rounded-lg">
-                                          <Image src={selectedProject.detailedImage} alt="Project Feature" className="rounded-lg shadow hover:scale-110 transition duration-300" />
-                                        </div>
+                                      <div className="mt-8">
+                                        <h3 className="text-2xl font-bold mb-4">Features:</h3>
+                                        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+                                          {selectedProject.features.map((feature, index) => (
+                                            <li key={index} className="p-4 rounded-lg shadow-lg bg-gradient-to-br from-indigo-800 to-purple-700 text-white">
+                                              <h4 className="text-xl font-bold mb-2">{feature.title}</h4>
+                                              <p className="text-sm">{feature.description}</p>
+                                            </li>
+                                          ))}
+                                        </ul>
                                       </div>
                                     </div>
                                   </div>
