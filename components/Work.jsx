@@ -13,7 +13,7 @@ const Work = () => {
     }
 
     const [ref, inView] = useInView({
-        threshold: 0.5, // The percentage of the element that must be visible to trigger the callback
+        threshold: 0.3, // The percentage of the element that must be visible to trigger the callback
         triggerOnce: true, // Only trigger the callback once
       });
 

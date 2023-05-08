@@ -34,7 +34,7 @@ const Contact = () => {
             emailjs.sendForm('service_dthrqjn', 'template_9ps6hpm', e.target, 'yWiJgqqQ_6TeCQOD0')
             .then((result) => {
                 console.log(result.text);
-                console.alert(result.text)
+                // console.alert(result.text)
             }, (error) => {
                 console.log(error.text);
             });
@@ -84,20 +84,26 @@ const Contact = () => {
     <div id='contact' className='flex relative mt-12 o' ref={ref}>
         <div className='container mx-auto rounded-2xl pb-32 my-0 flex flex-col md:flex-row md:space-x-12 md:space-y-0 space-y-6 overflow-hidden mt-24'>
             <div className='ml-4'>
-                    <div>
-                        <h1 className='font-bold  tracking- text-indigo-600'>Get in Touch!</h1>
-                        <p className='pt-2 lg:text-3xl md:text-xl sm:txt-lg text-lg tracking-wide text-indigo-400 hidden xl:block'>Whether you are curious about my work, want to schedule a meeting, or want a problem you need help with, do not hesitate to contact me!</p>
-                        <span className='mt-4 text-lg text-indigo-200'>I am open to Full-time, Part-time, Contract and Freelance oppurtunities!</span>
-                    </div>
-                    <div className='py-8 text-white'>
-                        <div className='flex flex-row py-2'>
-                            <AiFillPhone size={30}/>
-                            <span className='font-bold pl-2'>+1(647) 787 1532</span>
-                        </div>
-                    </div>
+                    {/* <AnimatePresence> */}
+                        {/* {inView && (  */}
+                            <motion.div
+                            variants={containerVariants}
+                            initial="hidden"
+                            animate="visible"
+                            >
+                                <motion.h1 className='font-bold  tracking- text-indigo-600' variants={cardVariants}>Get in Touch!</motion.h1>
+                                <motion.p className='pt-2 lg:text-3xl md:text-xl sm:txt-lg text-lg tracking-wide text-indigo-400 hidden xl:block' variants={cardVariants}>Whether you are curious about my work, want to schedule a meeting, or want a problem you need help with, do not hesitate to contact me!</motion.p>
+                                <motion.span className='mt-4 text-lg text-indigo-200' variants={cardVariants}>I am open to Full-time, Part-time, Contract and Freelance oppurtunities!</motion.span>
+                                <motion.div className='flex flex-row py-2 text-indigo-100 mt-4 mb-4' variants={cardVariants}>
+                                    <AiFillPhone size={30}/>
+                                    <span className='font-bold pl-2'>+1(647) 787 1532</span>
+                                </motion.div>
+                            </motion.div>
+                        {/* )} */}
+                    {/* </AnimatePresence> */}
                     <AnimatePresence>
                         {inView && (
-                            <motion.div className=''>
+                            <motion.div className='mt-8'>
                                     <motion.div className='flex flex-row py-2' 
                                     variants={containerVariants}
                                     initial="hidden"
