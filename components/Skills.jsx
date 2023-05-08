@@ -4,6 +4,8 @@ import Image from 'next/image'
 import {useState } from "react"
 import Filter from './Filter'
 import {AnimatePresence, LayoutGroup, motion} from 'framer-motion'
+import { useInView } from 'react-intersection-observer';
+
 const Skills = () => {
     // ['Frontend', 'Backend', 'Database', 'Data Analysis', 'Tools', 'Languages']
   const [imageItem, setImageItem] = useState(Images)
@@ -19,15 +21,64 @@ const Skills = () => {
     setImageItem(filteredData)
   }
 
+
+  const [ref, inView] = useInView({
+    threshold: 0.5, // The percentage of the element that must be visible to trigger the callback
+    triggerOnce: true, // Only trigger the callback once
+  });
+
+    const containerVariants = {
+        hidden: {
+        opacity: 0,
+        },
+        visible: {
+        opacity: 1,
+        transition: {
+            delay: 0.3, // add a delay so the cards stagger after the container animation
+            staggerChildren: 0.7, // stagger the card animation
+            duration: 1, // Increase the duration of the animation
+            ease: "easeInOut", // Use an easing function to make it smoother
+            },
+        },
+    };
+    
+    const cardVariants = {
+        hidden: {
+        opacity: 0,
+        y: 300,
+        },
+        visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1, // Increase the duration of the animation
+            ease: "easeInOut", // Use an easing function to make it smoother
+        },
+        },
+    };
+  
+
+
   return (
     <div className='mx-2 min-h-[200vh] sm:min-h-[150vh] md:min-h-[125vh] lg:min-h-[100vh] xl:min-h-[75vh] hidden md:block'>
-        <div id='skills' className='items-center text-center relative'>
+        <div id='skills' className='items-center text-center relative' ref={ref}>
             <div className='container mx-auto rounded-2xl pb-6 my-0'>
                 <h1 className='mt-60 uppercase'>Skills;</h1>
             </div>
-            <div className='container mx-auto flex flex-wrap pb-6 pt-12'>
-                <Filter filter={filter} />
-            </div>
+            <AnimatePresence>
+                {inView && (
+                    <>
+                        <motion.div className='container mx-auto flex flex-wrap pb-6 pt-12'
+                        variants={containerVariants}
+                        initial="hidden"
+                        animate="visible">
+                            <motion.div variants={cardVariants}>
+                                <Filter filter={filter} />
+                            </motion.div>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
             <motion.div layout className='container mx-auto min-h-fixed h-[250px] grid  grid-cols-1 md:grid-cols-6   lg:grid-cols-8  2xl:grid-cols-9 gap-4'>
                 <AnimatePresence>
                 <LayoutGroup>

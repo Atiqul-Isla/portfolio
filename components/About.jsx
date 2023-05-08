@@ -28,7 +28,7 @@ const About = () => {
           opacity: 1,
           transition: {
             delay: 0.3, // add a delay so the cards stagger after the container animation
-            staggerChildren: 0.7, // stagger the card animation
+            staggerChildren: 0.5, // stagger the card animation
             duration: 1, // Increase the duration of the animation
             ease: "easeInOut", // Use an easing function to make it smoother
              },
