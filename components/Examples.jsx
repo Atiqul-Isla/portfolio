@@ -8,9 +8,15 @@ import { useRouter } from 'next/router';
 import { FaGithub, FaFilePdf, FaYoutube } from "react-icons/fa";
 import Slider from "react-slick";
 import { useInView } from 'react-intersection-observer';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 
-const Examples = () => {
+const Examples = ({projectData, projectId}) => {
+
+    const selectedImage = projects.find(project => project.id === projectId);
 
     const hoverMotion = {
         rest: {
@@ -90,6 +96,7 @@ const Examples = () => {
           },
         },
       };
+  
 
   return (
     
@@ -179,16 +186,7 @@ const Examples = () => {
                                   </div>
                                   <div className="p-6">
                                   <h2 className="font-bold mt-6 text-center text-2xl uppercase">{selectedProject.name}</h2>
-                                  <p className="text-gray-500 text-sm text-center">{selectedProject.teamMembers} Team Members | Personal Role: {selectedProject.personalRole} | XXX {selectedProject.date}</p>
-                                  {/* <div className="flex mt-4 mb-8 justify-center items-start">
-                                    <div className='flex-1'>
-                                      {selectedProject.tags.map(tag => (
-                                        <span className="text-indigo-500 bg-gray-800 px-2 py-1 rounded-full text-sm mr-2 mt-4" key={tag}>
-                                          {tag}
-                                        </span>
-                                      ))}
-                                    </div>
-                                  </div> */}
+                                  <p className="text-gray-500 text-sm text-center">{selectedProject.members} | Personal Role: {selectedProject.role} | {selectedProject.date}</p>
                                   <div className="flex justify-between items-start">
                                     <div className="flex-1 mr-6">
                                       <h3 className="text-lg font-bold mb-2">Tags:</h3>
@@ -210,7 +208,24 @@ const Examples = () => {
                                       <h3 className="text-lg font-bold mt-6 mb-2">Details:</h3>
                                       <p className="text-gray-400 text-sm">{selectedProject.details}</p>
                                       <div className="rounded-lg shadow-lg overflow-hidden mb-8 mt-8">
-                                        <Image src={selectedProject.detailedImage} alt="Project detail" className="w-full hover:scale-110 transition duration-300"/>
+                                          <Carousel
+                                            showArrows={true}
+                                            showThumbs={false}
+                                            selectedItem={0}
+                                            infiniteLoop={true}
+                                            autoPlay={true}
+                                            interval={5000}
+                                            transitionTime={500}
+                                            useKeyboardArrows={true}
+                                            dynamicHeight={false}
+                                            style={{ width: '90%', margin: '0 auto' }}
+                                          >
+                                            {selectedProject.slideImages.map((image, index) => (
+                                              <div key={index}>
+                                                <Image src={image} alt="Project detail" className="w-full max-h-[60vh] object-contain" />
+                                              </div>
+                                            ))}
+                                          </Carousel>
                                       </div>
                                       <div className="mt-8">
                                         <h3 className="text-2xl font-bold mb-4">Features:</h3>
