@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import WorkData from '../data/workData'
 import {AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai'
+import { IoMdArrowDropright } from 'react-icons/io';
 import {delay, motion, AnimatePresence} from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
 
@@ -77,14 +78,14 @@ const Work = () => {
                                         </motion.div>
                                     </motion.div>
                                     {!open[item.id] && 
-                                    <motion.div layout className='bg-gray-300 rounded-lg pl-2 mt-4' initial={{opacity: 0, y:-30}} animate={{opacity: 1, y:0}} exit={{opacity: 0, y:-30}} transition={{duration: 0.3, delay: 0.3}}>
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                                Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, 
-                                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with 
-                                                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                    </motion.div>}
+                                    <motion.ul layout className='bg-gray-300 rounded-lg pl-2 mt-4' initial={{opacity: 0, y:-30}} animate={{opacity: 1, y:0}} exit={{opacity: 0, y:-30}} transition={{duration: 0.3, delay: 0.3}}>
+                                          {item.details.map((point, index) => (
+                                            <div key={index} className="pb-4 pt-2">
+                                              <div className='flex'><IoMdArrowDropright className="mr-2 mt-1 flex-shrink-0" size={20}/> {point}</div>
+                                            </div>
+                                          ))}
+                                   
+                                    </motion.ul>}
                                 </motion.div>
                                 </>
                             )
