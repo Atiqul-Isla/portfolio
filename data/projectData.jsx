@@ -35,6 +35,28 @@ import chat_3 from '../public/assets/projects/slideshow/chat_3.jpg'
 import chat_4 from '../public/assets/projects/slideshow/chat_4.jpg'
 import chat_5 from '../public/assets/projects/slideshow/chat_5.jpg'
 
+import book_1 from '../public/assets/projects/slideshow/book_1.jpg'
+import book_2 from '../public/assets/projects/slideshow/book_2.jpg'
+import book_3 from '../public/assets/projects/slideshow/book_3.jpg'
+import book_4 from '../public/assets/projects/slideshow/book_4.jpg'
+import book_5 from '../public/assets/projects/slideshow/book_5.jpg'
+import book_6 from '../public/assets/projects/slideshow/book_6.jpg'
+import book_7 from '../public/assets/projects/slideshow/book_7.jpg'
+import book_8 from '../public/assets/projects/slideshow/book_8.jpg'
+import book_9 from '../public/assets/projects/slideshow/book_9.jpg'
+import book_10 from '../public/assets/projects/slideshow/book_10.jpg'
+
+
+import shop_1 from '../public/assets/projects/slideshow/shop_1.jpg'
+import shop_2 from '../public/assets/projects/slideshow/shop_2.jpg'
+import shop_3 from '../public/assets/projects/slideshow/shop_3.jpg'
+import shop_4 from '../public/assets/projects/slideshow/shop_4.jpg'
+// import shop_5 from '../public/assets/projects/slideshow/shop_5.jpg'
+import shop_6 from '../public/assets/projects/slideshow/shop_6.jpg'
+import shop_7 from '../public/assets/projects/slideshow/shop_7.jpg'
+import shop_8 from '../public/assets/projects/slideshow/shop_8.jpg'
+import shop_9 from '../public/assets/projects/slideshow/shop_9.jpg'
+
 
 
 // Add teamm members, personal role, date, more images, featurees
@@ -73,7 +95,7 @@ const projects = [
             ],
         videoUrl: '',
         githubUrl: 'https://github.com/Atiqul-Isla/book-club',
-        slideImages: [SSS_1, SSS_2, SSS_3, SSS_4],
+        slideImages: [book_1, book_2, book_3, book_4,book_5, book_6, book_7, book_8, book_9, book_10,],
         members: 'Solo',
         role: 'Software Engineer',
         date: '2022',
@@ -166,13 +188,11 @@ const projects = [
         tags: ['Fullstack', 'Web-app', 'Ecommerce', 'CRUD', 'Ratings'],
         skills: ['Python', 'Django', 'JavaScript', 'HTML', 'CSS', 'Bootstrap', ],
         features: [
-            {title: 'Full Authentication', description: 'User\'s ar able to register and login in to keep data secure.'}, 
             {title: 'Rating System', description: 'Customers are able to comment on and rate products.'}, 
-            {title: 'Cart System', description: 'User\'s can add or remove products they are interested in from their cart.'},
             ],
         videoUrl: '',
         githubUrl: 'https://github.com/Atiqul-Isla/Ecommerce-Site',
-        slideImages: [SSS_1, SSS_2, SSS_3, SSS_4],
+        slideImages: [shop_1, shop_2, shop_3, shop_4, shop_6, shop_7, shop_8, shop_9],
         members: 'Solo',
         role: 'Software Engineer',
         date: '2020',

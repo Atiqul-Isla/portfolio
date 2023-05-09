@@ -30,7 +30,7 @@ const Examples = ({projectData, projectId}) => {
         },
         hover: {
         //   color: "blue",
-        //   x: 30,
+        x: 30,
           transition: {
             duration: 0.4,
             type: "tween",
@@ -43,7 +43,7 @@ const Examples = ({projectData, projectId}) => {
         initial: {opacity: 0},
         rest: { ease: "easeOut", duration: 0.2},
         hover: {
-          y: 200,
+          y: ['50%','90%'],
           scale: 1,
           opacity: 1,
           transition: {
@@ -189,10 +189,10 @@ const Examples = ({projectData, projectId}) => {
                                   <p className="text-gray-500 text-sm text-center">{selectedProject.members} | Personal Role: {selectedProject.role} | {selectedProject.date}</p>
                                   <div className="flex justify-between items-start">
                                     <div className="flex-1 mr-6">
-                                      <h3 className="text-lg font-bold mb-2">Tags:</h3>
+                                      <h3 className="text-lg font-bold mb-2 mt-4">Tags:</h3>
                                       <div className="flex flex-wrap">
                                         {selectedProject.tags.map(tag => (
-                                          <span className="text-indigo-500 bg-gray-800 px-2 py-1 rounded-full text-sm mr-2 mt-4" key={tag}>
+                                          <span className="text-indigo-500 bg-gray-800 px-2 py-1 rounded-full text-sm mr-2 mt-4 sm:text-md sm:mr-4 truncate" key={tag}>
                                             {tag}
                                           </span>
                                         ))}
@@ -200,7 +200,7 @@ const Examples = ({projectData, projectId}) => {
                                       <h3 className="text-lg font-bold mb-2 mt-4">Skills:</h3>
                                       <div className="flex flex-wrap">
                                         {selectedProject.skills.map(skill => (
-                                          <span className="text-indigo-500 bg-gray-800 px-2 py-1 rounded-full text-sm mr-2 mt-4" key={skill}>
+                                          <span className="text-indigo-500 bg-gray-800 px-2 py-1 rounded-full text-sm mr-2 mt-4 truncate" key={skill}>
                                             {skill}
                                           </span>
                                         ))}
@@ -232,7 +232,7 @@ const Examples = ({projectData, projectId}) => {
                                         <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
                                           {selectedProject.features.map((feature, index) => (
                                             <li key={index} className="p-4 rounded-lg shadow-lg bg-gradient-to-br from-indigo-800 to-purple-700 text-white">
-                                              <h4 className="text-xl font-bold mb-2">{feature.title}</h4>
+                                              <h4 className="text-xl font-bold mb-2 truncate">{feature.title}</h4>
                                               <p className="text-sm">{feature.description}</p>
                                             </li>
                                           ))}
