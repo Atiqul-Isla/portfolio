@@ -39,11 +39,14 @@ const Examples = ({projectData, projectId}) => {
         }
       };
     
-    const textMotion = {
-        initial: {opacity: 0},
+      const textMotion = {
+        initial: {
+          opacity: 0,
+          y: "100%", // start from the bottom
+        },
         rest: { ease: "easeOut", duration: 0.2},
         hover: {
-          y: ['50%','90%'],
+          y: "-200%", // appear a quarter of the way through the image
           scale: 1,
           opacity: 1,
           transition: {
@@ -53,6 +56,7 @@ const Examples = ({projectData, projectId}) => {
           }
         }
       };
+      
     
     const [showPopup, setShowPopup] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
@@ -100,7 +104,7 @@ const Examples = ({projectData, projectId}) => {
 
   return (
     
-    <div id='projects' className='mt-[70vh] 2xl:mt-[20vh] w-full' ref={ref}>
+    <div id='projects' className='mt-[20vh] md:mt-[70vh] 2xl:mt-[20vh] w-full' ref={ref}>
       <AnimatePresence>
         {inView && (
           <motion.div className='container mx-auto  p-12 rounded-2xl'>
@@ -130,7 +134,7 @@ const Examples = ({projectData, projectId}) => {
                               loading="lazy"
                             />
                             <motion.div
-                              className="text-white text-center hidden group-hover:block overflow-hidden text-ellipsis whitespace-nowrap w-[100%]"
+                              className="text-white text-center hidden group-hover:block overflow-hidden text-ellipsis whitespace-nowrap w-[100%] absolute bottom-[-90px] md:bottom-[-20px] 2xl:bottom-0"
                               variants={textMotion}
                             >
                               <h4 className="">{project.name}</h4>

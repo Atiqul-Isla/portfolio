@@ -79,7 +79,7 @@ const Skills = () => {
                     </>
                 )}
             </AnimatePresence>
-            <motion.div layout className='container mx-auto min-h-fixed h-[250px] grid  grid-cols-1 md:grid-cols-6   lg:grid-cols-8  2xl:grid-cols-9 gap-4'>
+            <motion.div layout className='container mx-auto min-h-fixed h-[250px] grid  grid-cols-1 md:grid-cols-6   lg:grid-cols-8  2xl:grid-cols-9 gap-4 '>
                 <AnimatePresence>
                 <LayoutGroup>
                 {imageItem.map((item, index) => {
@@ -93,13 +93,13 @@ const Skills = () => {
                             opacity: { duration: 0.2, ease: 'linear'},
                             layout: { duration: 0.3 }
                           }} 
-                        className={'auto flex flex-col lg:flex-row gap-40 lg:gap-0 items-center justify-between p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 md:shadow-indigo-600 mt-12 lg:mx-2'} 
+                        className={'auto flex flex-col lg:flex-row gap-40 lg:gap-0 items-center justify-between p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 md:shadow-indigo-600 mt-12'} 
                         key={item.id}
                         style={{ width: '100%', height: '75%' }}
                         >
                                  <div className="card  text-indigo-600">
-                                    <Image className='hidden md:block' src={item.image} width={104} height={104} alt='' />
-                                    <h3 className="text-lg font-bold mt-2 uppercase"><strong>{item.name}</strong></h3>
+                                    <Image className='hidden md:block truncate' src={item.image} width={104} height={104} alt='' />
+                                    <h3 className="text-lg font-bold mt-2 uppercase truncate"><strong>{item.name}</strong></h3>
                                 </div>
                         </motion.div>
                     )
