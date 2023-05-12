@@ -149,14 +149,19 @@ const Examples = ({projectData, projectId}) => {
                           
                             {showPopup && (
                               <motion.div
-                                className="fixed top-0 left-0 right-0 bottom-0 bg-gray-500 bg-opacity-20 flex items-center justify-center z-[99] filter-none backdrop-blur-sm backdrop-brightness-100 cursor-default"
+                                className="fixed top-0 left-0 right-0 bottom-0 bg-gray-500 bg-opacity-20 flex items-center justify-center z-[99] filter-none backdrop-blur-sm backdrop-brightness-100 cursor-default shadow-none"
                                 initial={{ opacity: 0, scale: 0.5 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 exit={{ opacity: 0, scale: 0.5 }}
                                 transition={{ duration: 0.2 }}
+                                onClick={(e) => {
+                                  if (e.target === e.currentTarget) { // check if the clicked element is the same as the outermost motion.div element
+                                    setShowPopup(false);
+                                  }
+                                }}
                               >
                                 <motion.div
-                                  className="bg-[#1b1d20] rounded-lg w-[60vw] h-[70vh] l "
+                                  className="bg-[#1b1d20] rounded-lg w-[60vw] h-[70vh]"
                                   style={{overflowY: "scroll" }}
                                   initial="hidden" 
                                   animate="visible" 
@@ -252,14 +257,6 @@ const Examples = ({projectData, projectId}) => {
                                       className="text-gray-400 hover:text-indigo-500 mx-2"
                                     >
                                       <FaGithub size={30} />
-                                    </a>
-                                    <a
-                                      href={selectedProject.reportUrl}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="text-gray-400 hover:text-indigo-500 mx-2"
-                                    >
-                                      <FaFilePdf size={30} />
                                     </a>
                                     <a
                                       href={selectedProject.videoUrl}

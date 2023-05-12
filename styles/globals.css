@@ -89,22 +89,7 @@ html {
   }
 }
 
-/* Style the scrollbar */
-/* .bg-white::-webkit-scrollbar {
-  width: 8px;
-  border-radius: 4px;
+/* Remove scrollbar shadow in Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  box-shadow: none;
 }
-
-.bg-white::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-.bg-white::-webkit-scrollbar-thumb {
-  background: #9d4edd;
-  border-radius: 4px;
-}
-
-.bg-white::-webkit-scrollbar-thumb:hover {
-  background: #a65ce2;
-} */

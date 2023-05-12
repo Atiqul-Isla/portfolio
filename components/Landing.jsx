@@ -5,10 +5,27 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import {RiMailFill} from 'react-icons/ri'
 import { AnimatePresence, motion } from 'framer-motion'
 import Image from 'next/image'
+import { Link } from 'react-scroll'
 
 const Landing = () => {
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:isla.atiqul@gmail.com';
+  };
+
+  const handleResumeClick = () => {
+    window.open('/assets/resume.pdf', '_blank');
+  };
+
+  const handleGitHubClick = () => {
+    window.open('https://github.com/Atiqul-Isla', '_blank');
+
+  };
+
+  const handleLinkedInClick = () => {
+    window.open('https://www.linkedin.com/in/islam-atiqul/', '_blank');
+  };
   return (
-    <div className='absolute w-full h-screen text-center z-[80]'>
+    <div className='absolute w-full h-screen text-center z-[50]'>
         <div className='container mx-auto h-full w-full p-2 flex justify-center items-center'>
             <div>
                 <h1 className='uppercase tracking-widest sm:7xl md:text-8xl'>Atiqul Islam</h1>
@@ -46,10 +63,10 @@ const Landing = () => {
                     }
                   }
                 }}>
-                    <motion.div className='rounded-full shadow-md  p-3 cursor-pointer hover:scale-105 bg-[white] text-black'><FaLinkedin size={40} className=" rounded-md"></FaLinkedin></motion.div>
-                    <motion.div className='rounded-full shadow-md  p-3 cursor-pointer hover:scale-105 bg-[white] text-black'><FaGithub size={40} className="rounded-2xl" /></motion.div>
-                    <motion.div className='rounded-full shadow-md  p-3 cursor-pointer hover:scale-105 bg-[white] text-black'><RiMailFill size={40} className=" rounded-md"/></motion.div>
-                    <motion.div className='rounded-full shadow-md  p-3 cursor-pointer hover:scale-105 bg-[white] text-black'><BsPersonLinesFill size={40} className=" rounded-md"/></motion.div>
+                    <motion.div className='rounded-full shadow-md  p-3 cursor-pointer hover:scale-105 bg-[white] text-black'><Link onClick={handleLinkedInClick}><FaLinkedin size={40} className=" rounded-md"></FaLinkedin></Link></motion.div>
+                    <motion.div className='rounded-full shadow-md  p-3 cursor-pointer hover:scale-105 bg-[white] text-black'><Link onClick={handleGitHubClick}><FaGithub size={40} className="rounded-2xl" /></Link></motion.div>
+                    <motion.div className='rounded-full shadow-md  p-3 cursor-pointer hover:scale-105 bg-[white] text-black'><Link onClick={handleEmailClick}><RiMailFill size={40} className=" rounded-md"/></Link></motion.div>
+                    <motion.div className='rounded-full shadow-md  p-3 cursor-pointer hover:scale-105 bg-[white] text-black'><Link onClick={handleResumeClick}><BsPersonLinesFill size={40} className=" rounded-md"/></Link></motion.div>
                 </motion.div>
             </div>
         </div>

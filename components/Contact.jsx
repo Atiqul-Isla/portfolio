@@ -79,6 +79,23 @@ const Contact = () => {
           },
         },
       };
+    
+    const handleEmailClick = () => {
+        window.location.href = 'mailto:isla.atiqul@gmail.com';
+      };
+    
+    const handleResumeClick = () => {
+        window.open('/assets/resume.pdf', '_blank');
+      };
+    
+    const handleGitHubClick = () => {
+        window.open('https://github.com/Atiqul-Isla', '_blank');
+    
+      };
+    
+      const handleLinkedInClick = () => {
+        window.open('https://www.linkedin.com/in/islam-atiqul/', '_blank');
+      };
       
   return (
     <div id='contact' className='flex relative mt-12 o' ref={ref}>
@@ -109,10 +126,10 @@ const Contact = () => {
                                     initial="hidden"
                                     animate="visible"
                                     >
-                                        <motion.div className='rounded-full shadow-md p-3 cursor-pointer hover:scale-105 bg-[white] text-black' variants={cardVariants}><FaLinkedin size={40} className=" rounded-md" ></FaLinkedin></motion.div>
-                                        <motion.div className='rounded-full shadow-md  ml-4  p-3 cursor-pointer hover:scale-105 bg-[white] text-black' variants={cardVariants}><FaGithub size={40} className="rounded-2xl" /></motion.div>
-                                        <motion.div className='rounded-full shadow-md  ml-4  p-3 cursor-pointer hover:scale-105 bg-[white] text-black'variants={cardVariants}><RiMailFill size={40} className=" rounded-md"/></motion.div>
-                                        <motion.div className='rounded-full shadow-md ml-4 p-3 cursor-pointer hover:scale-105 bg-[white] text-black' variants={cardVariants}><BsPersonLinesFill size={40} className=" rounded-md"/></motion.div>
+                                        <motion.div className='rounded-full shadow-md p-3 cursor-pointer hover:scale-105 bg-[white] text-black' variants={cardVariants} onClick={handleLinkedInClick}><FaLinkedin size={40} className=" rounded-md" ></FaLinkedin></motion.div>
+                                        <motion.div className='rounded-full shadow-md  ml-4  p-3 cursor-pointer hover:scale-105 bg-[white] text-black' variants={cardVariants} onClick={handleGitHubClick}><FaGithub size={40} className="rounded-2xl" /></motion.div>
+                                        <motion.div className='rounded-full shadow-md  ml-4  p-3 cursor-pointer hover:scale-105 bg-[white] text-black'variants={cardVariants} onClick={handleEmailClick}><RiMailFill size={40} className=" rounded-md"/></motion.div>
+                                        <motion.div className='rounded-full shadow-md ml-4 p-3 cursor-pointer hover:scale-105 bg-[white] text-black' variants={cardVariants} onClick={handleResumeClick}><BsPersonLinesFill size={40} className=" rounded-md"/></motion.div>
                                     </motion.div>
                             </motion.div>
                         )}

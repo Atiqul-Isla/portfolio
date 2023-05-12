@@ -10,7 +10,7 @@ import image10 from '../public/assets/skills/icons8-linux-96.png'
 import image11 from '../public/assets/skills/icons8-opencv-96.png'
 import image13 from '../public/assets/skills/mongo.png'
 import image14 from '../public/assets/skills/icons8-pandas-96.png'
-import image15 from '../public/assets/skills/icons8-bootstrap-96.png'
+import image15 from '../public/assets/skills/icons8-flask-96.png'
 import image16 from '../public/assets/skills/icons8-c++-96.png'
 import image17 from '../public/assets/skills/icons8-java-96.png'
 import image18 from '../public/assets/skills/icons8-numpy-96.png'
@@ -72,15 +72,15 @@ const Images = [
     },
     {
         id: 9,
-        image: image15,
-        type: 'Frontend',
-        name: 'Bootstrap' 
-    },
-    {
-        id: 10,
         image: image5,
         type: 'Frontend',
         name: 'Tailwind' 
+    },
+    {
+        id: 10,
+        image: image15,
+        type: 'Backend',
+        name: 'Flask' 
     },
     {
         id: 11,

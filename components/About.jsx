@@ -71,11 +71,9 @@ const About = () => {
                                     <Image src={require('../public/assets/React-Icon.jpg')} alt='' className=' w-full lg:h-72 md:h-48 md:block md:w-full md:object-cover md:object-center hidden md:border-indigo-700'></Image>
                                     <div className='p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in'>
                                         <h3 className='text-md font-medium text-indigo-300 mb-1'>Full Stack;</h3>
-                                        <h2 className='text-xl font-semibold mb-3'>Web Developer &#123;</h2>
-                                        <p className=' text-sm leading-relaxed mb-3'>I am an experienced Web Developer who has worked on over 30 projects &#125;</p>
-                                        <div className='flex items-center flex-wrap'>
-                                            <Link href={'/'} className='text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0'>See-My-Work() =&gt;</Link>
-                                        </div>
+                                        <h2 className='text-xl font-semibold mb-3'>Web Developer</h2>
+                                        <p className=' text-sm leading-relaxed mb-3'>I am an experienced Web Developer who has worked on over a dozen projects.</p>
+                                    
                                     </div>
                                 </div>
 
@@ -85,11 +83,9 @@ const About = () => {
                                     <Image src={require('../public/assets/Data.jpg')} alt='' className='w-full lg:h-72 md:h-48 md:block md:w-full md:object-cover md:object-center hidden md:border-indigo-700'></Image>
                                     <div className='p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in'>
                                         <h3 className='text-md font-medium text-indigo-300 mb-1'>Visuals, Models, Reports;</h3>
-                                        <h2 className='text-xl font-semibold mb-3'>Data Analyst &#123;</h2>
-                                        <p className=' text-sm leading-relaxed mb-3'>I am experienced working with data including using Machine Learning &#125;</p>
-                                        <div className='flex items-center flex-wrap'>
-                                            <Link href={'/'} className='text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0'>See-My-Work() =&gt;</Link>
-                                        </div>
+                                        <h2 className='text-xl font-semibold mb-3'>Data Analyst</h2>
+                                        <p className=' text-sm leading-relaxed mb-3'>I am experienced working with data including using Machine Learning algorithms.</p>
+                                       
                                     </div>
                                 </div>
 
@@ -99,11 +95,9 @@ const About = () => {
                                     <Image src={require('../public/assets/Devops.jpg')} alt='' className='w-full lg:h-72 md:h-48 md:block md:w-full md:object-cover md:object-center hidden md:border-indigo-700'></Image>
                                     <div className='p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in'>
                                         <h3 className='text-md font-medium text-indigo-300 mb-1'>Delivery, Administration;</h3>
-                                        <h2 className='text-xl font-semibold mb-3'>DevOps &#123;</h2>
-                                        <p className=' text-sm leading-relaxed mb-3'>I am an experienced with project administration using Linux &#125;</p>
-                                        <div className='flex items-center flex-wrap'>
-                                            <Link href={'/'} className='text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0'>See-My-Work() =&gt;</Link>
-                                        </div>
+                                        <h2 className='text-xl font-semibold mb-3'>DevOps </h2>
+                                        <p className=' text-sm leading-relaxed mb-3'>I am experienced with project administration using Linux.</p>
+                                 
                                     </div>
                                 </div>
 
