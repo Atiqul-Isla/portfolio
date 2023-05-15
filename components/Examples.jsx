@@ -5,7 +5,7 @@ import image1 from '../public/assets/Devops.jpg'
 import { motion, whileHover, AnimatePresence } from 'framer-motion'
 import projects from '../data/projectData'
 import { useRouter } from 'next/router';
-import { FaGithub, FaFilePdf, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaFilePdf, FaGlobe } from "react-icons/fa";
 import Slider from "react-slick";
 import { useInView } from 'react-intersection-observer';
 import "slick-carousel/slick/slick.css";
@@ -264,7 +264,7 @@ const Examples = ({projectData, projectId}) => {
                                       rel="noopener noreferrer"
                                       className="text-gray-400 hover:text-indigo-500 mx-2"
                                     >
-                                      <FaYoutube size={30} />
+                                      <FaGlobe size={30} />
                                     </a>
                                   </div>
                                 </div>

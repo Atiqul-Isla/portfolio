@@ -32,7 +32,7 @@ const Images = [
         id: 2,
         image: image1,
         type: 'Languages',
-        name: 'JES' 
+        name: 'ES6' 
     },
     {
         id: 3,
