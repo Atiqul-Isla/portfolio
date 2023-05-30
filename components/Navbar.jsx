@@ -7,6 +7,23 @@ import {motion} from 'framer-motion'
 
 const Navbar = () => {
 
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:isla.atiqul@gmail.com';
+    };
+
+  const handleResumeClick = () => {
+    window.open('/assets/resume.pdf', '_blank');
+    };
+
+  const handleGitHubClick = () => {
+    window.open('https://github.com/Atiqul-Isla', '_blank');
+
+    };
+
+  const handleLinkedInClick = () => {
+    window.open('https://www.linkedin.com/in/islam-atiqul/', '_blank');
+    };
+
   const [nav, setNav] = useState(false)
   const handleNav = () => {
     setNav(!nav)
@@ -111,16 +128,16 @@ const Navbar = () => {
                         <div className='pt-40'>
                             <p className='uppercase tracking-widest'>Connect With Me!</p>
                             <div className='flex item-center justify-between my-4 w-full sm:w-[80%]'>
-                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'  onClick={handleLinkedInClick}>
                                     <FaLinkedinIn/>
                                 </div>
-                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300' onClick={handleGitHubClick}>
                                     <FaGithub/>
                                 </div>
-                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300' onClick={handleEmailClick}>
                                     <AiOutlineMail/>
                                 </div>
-                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>
+                                <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300' onClick={handleResumeClick}>
                                     <BsFillPersonLinesFill/>
                                 </div>
                             </div>
