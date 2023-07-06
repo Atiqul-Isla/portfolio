@@ -196,6 +196,24 @@ const Examples = ({projectData, projectId}) => {
                                   <div className="p-6">
                                   <h2 className="font-bold mt-6 text-center text-2xl uppercase">{selectedProject.name}</h2>
                                   <p className="text-gray-500 text-sm text-center">{selectedProject.members} | Personal Role: {selectedProject.role} | {selectedProject.date}</p>
+                                  <div className="mt-2 flex justify-center">
+                                    <a
+                                      href={selectedProject.githubUrl}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-gray-400 hover:text-indigo-500 mx-2"
+                                    >
+                                      <FaGithub size={30} />
+                                    </a>
+                                    <a
+                                      href={selectedProject.videoUrl}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-gray-400 hover:text-indigo-500 mx-2"
+                                    >
+                                      <FaGlobe size={30} />
+                                    </a>
+                                  </div>
                                   <div className="flex justify-between items-start">
                                     <div className="flex-1 mr-6">
                                       <h3 className="text-lg font-bold mb-2 mt-4">Tags:</h3>
@@ -249,24 +267,7 @@ const Examples = ({projectData, projectId}) => {
                                       </div>
                                     </div>
                                   </div>
-                                  <div className="mt-8 pt-8 mb-4 flex justify-center">
-                                    <a
-                                      href={selectedProject.githubUrl}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="text-gray-400 hover:text-indigo-500 mx-2"
-                                    >
-                                      <FaGithub size={30} />
-                                    </a>
-                                    <a
-                                      href={selectedProject.videoUrl}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="text-gray-400 hover:text-indigo-500 mx-2"
-                                    >
-                                      <FaGlobe size={30} />
-                                    </a>
-                                  </div>
+                                  
                                 </div>
                                 </motion.div>
                               </motion.div>

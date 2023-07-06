@@ -64,12 +64,44 @@ import shop_8 from '../public/assets/projects/slideshow/shop_8.jpg'
 import shop_9 from '../public/assets/projects/slideshow/shop_9.jpg'
 
 
+import poke_1 from '../public/assets/projects/slideshow/pokemon_1.jpg'
+import poke_2 from '../public/assets/projects/slideshow/pokemon_2.jpg'
+import poke_3 from '../public/assets/projects/slideshow/pokemon_3.jpg'
+import poke_4 from '../public/assets/projects/slideshow/pokemon_4.jpg'
+
+import bug_1 from '../public/assets/projects/slideshow/bug_1.jpg'
+import bug_2 from '../public/assets/projects/slideshow/bug_2.jpg'
+import bug_3 from '../public/assets/projects/slideshow/bug_3.jpg'
+import bug_4 from '../public/assets/projects/slideshow/bug_4.jpg'
+import bug_5 from '../public/assets/projects/slideshow/bug_5.jpg'
+import bug_6 from '../public/assets/projects/slideshow/bug_6.jpg'
+import bug_7 from '../public/assets/projects/slideshow/bug_7.jpg'
+
 
 // Add teamm members, personal role, date, more images, featurees
 
 const projects = [
     {
         id: 1,
+        name: 'Bug Tracking Application',
+        image: bug_7,
+        tags: ['Fullstack', 'Web-app', 'CRUD',],
+        skills: ['C#', 'ASP.NET Core', 'Entity Framework Core', 'JavaScript','HTML', 'CSS', 'Bootstrap', ],
+        features: [
+            {title: 'Secure Authentication', description: 'User\'s can create their own account and login to authenticate themselves on the forum.'}, 
+            {title: 'CRUD', description: 'Full CRUD functionality where users can create, read, update, and delete projects and tickets.'}, 
+            ],
+        videoUrl: "https://atiqul-pokedex.netlify.app/",
+        githubUrl: 'https://github.com/Atiqul-Isla/book-club',
+        slideImages: [bug_1, bug_2, bug_3, bug_4, bug_5, bug_6],
+        members: 'Solo',
+        role: 'Software Engineer',
+        date: '2022',
+        details: 'A Full-stack web-application built using the .NET framework which allows users to track their projects and issues.',
+        class: 'rounded-lg shadow-lg shadow-black min-h-[30vh] cursor-pointer flex-shrink-0 lg:col-span-1 relative group'
+    },
+    {
+        id: 2,
         name: 'Smart Security System',
         image: SSS,
         tags: ['Machine Learning', 'Algorithms', 'LBPH', 'Facial Recognition', 'Webapp', 'Embedded Systems', 'Image Processing', 'SSH'],
@@ -89,7 +121,26 @@ const projects = [
         class: 'rounded-lg shadow-lg shadow-black min-h-[30vh] cursor-pointer flex-shrink-0  lg:col-span-2 relative group'
     },
     {
-        id: 2,
+        id: 3,
+        name: 'Pokedex Web-App',
+        image: poke_1,
+        tags: ['Frontend Showcase, React Hooks, Fetch requests, Algorithms and Data Structures'],
+        skills: ['React', 'REST APIs', 'JavaScript','HTML', 'CSS', 'Tailwind', ],
+        features: [
+            {title: 'Full Deployment', description: 'Site has been fully deployed with CI/CD functionality.'}, 
+            {title: 'Easy to Navigate', description: 'Simple layout and easy to traverse layout.'},
+            ],
+        videoUrl: "https://atiqul-pokedex.netlify.app/",
+        githubUrl: 'https://github.com/Atiqul-Isla/book-club',
+        slideImages: [poke_1, poke_2, poke_3, poke_4],
+        members: 'Solo',
+        role: 'Software Engineer',
+        date: '2022',
+        details: 'A static web-appliaction that allows users to view all 1000+ Pokemon and their descriptions.',
+        class: 'rounded-lg shadow-lg shadow-black min-h-[30vh] cursor-pointer flex-shrink-0 lg:col-span-1 relative group'
+    },
+    {
+        id: 4,
         name: 'BOOKLUB (Online Forum)',
         image: booklub,
         tags: ['Forum', 'Fullstack', 'Web-app', 'Chatting feature', 'CRUD', 'Websockets'],
@@ -108,7 +159,7 @@ const projects = [
         class: 'rounded-lg shadow-lg shadow-black min-h-[30vh] cursor-pointer flex-shrink-0 lg:col-span-1 relative group'
     },
     {
-        id: 3,
+        id: 5,
         name: 'Nivaly (Online Marketing Agency)',
         image: nivaly_1,
         tags: ['frontend', 'Landing Page', 'Agency Site'],
@@ -128,7 +179,7 @@ const projects = [
         class: 'rounded-lg shadow-lg shadow-black min-h-[30vh] cursor-pointer flex-shrink-0 lg:col-span-1 relative group'
     },
     {
-        id: 4,
+        id: 6,
         name: 'Image Demosaic Algorithm',
         image: demosaic,
         tags: ['Machine Learning', 'Linear Regression', 'Image Processing'],
@@ -147,7 +198,7 @@ const projects = [
         class: 'rounded-lg shadow-lg shadow-black min-h-[30vh] cursor-pointer flex-shrink-0 lg:col-span-1 relative group'
     },
     {
-        id: 5,
+        id: 7,
         name: 'Pacemaker Monitor',
         image: pace_1,
         tags: ['GUI', 'Embedded Systems', 'IoT', 'Real Time Data', 'Systems Design'],
@@ -166,7 +217,7 @@ const projects = [
         class: 'rounded-lg shadow-lg shadow-black min-h-[30vh] cursor-pointer flex-shrink-0 lg:col-span-1 relative group'
     },
     {
-        id: 6,
+        id: 8,
         name: 'Chat Application',
         image: chat,
         tags: ['Network', 'TCP', 'UDP', 'Chatting feature', 'threads', 'sockets', 'Secure',],
@@ -184,7 +235,7 @@ const projects = [
         class: 'rounded-lg shadow-lg shadow-black min-h-[30vh] cursor-pointer flex-shrink-0 lg:col-span-2 relative group'
     },
     {
-        id: 7,
+        id: 9,
         name: 'Ecommerce Site',
         image: maplebarber,
         tags: ['Fullstack', 'Web-app', 'Ecommerce', 'CRUD', 'Ratings'],
