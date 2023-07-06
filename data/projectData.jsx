@@ -66,7 +66,7 @@ import shop_9 from '../public/assets/projects/slideshow/shop_9.jpg'
 
 import poke_1 from '../public/assets/projects/slideshow/pokemon_1.jpg'
 import poke_2 from '../public/assets/projects/slideshow/pokemon_2.jpg'
-import poke_3 from '../public/assets/projects/slideshow/pokemon_3.jpg'
+import poke_3 from '../public/assets/projects/slideshow/Pokemon_3.jpg'
 import poke_4 from '../public/assets/projects/slideshow/pokemon_4.jpg'
 
 import bug_1 from '../public/assets/projects/slideshow/bug_1.jpg'
